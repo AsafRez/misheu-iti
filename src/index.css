@@ -1,0 +1,86 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #FAF8F5;
+  --ink: #1E293B;
+  --soft: #475569;
+  --card: #FFFFFF;
+  --line: #D6CEC2;
+  --blue: #1E3A8A;
+  --green: #14532D;
+  --clay: #7C2D12;
+  --far: #DCE6EE;
+  --mid: #D3E0D0;
+  --near: #EADFCB;
+  --sun: #F3C98B;
+  --breath: 1;
+  --px: 0;
+  --sy: 0px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #141A22;
+    --ink: #F1F5F9;
+    --soft: #94A3B8;
+    --card: #1E2733;
+    --line: #3B4757;
+    --far: #1F2E3D;
+    --mid: #253930;
+    --near: #383126;
+    --sun: #D97706;
+    --blue: #1E3A8A;
+    --green: #14532D;
+    --clay: #7C2D12;
+  }
+}
+
+html {
+  font-family: 'Heebo', system-ui, -apple-system, sans-serif;
+  font-size: 18px;
+  background-color: var(--bg);
+  color: var(--ink);
+  direction: rtl;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  padding-top: env(safe-area-inset-top);
+  padding-bottom: env(safe-area-inset-bottom);
+  padding-left: env(safe-area-inset-left);
+  padding-right: env(safe-area-inset-right);
+  background-color: var(--bg);
+  color: var(--ink);
+  font-size: 1.125rem; /* 18px minimum */
+  line-height: 1.6;
+}
+
+:focus-visible {
+  outline: 4px solid #F59E0B !important;
+  outline-offset: 3px !important;
+}
+
+input[type="checkbox"] {
+  width: 36px;
+  height: 36px;
+  min-width: 36px;
+  min-height: 36px;
+  accent-color: #14532D;
+  cursor: pointer;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+  .scenery-layer, .sun-circle, .breathing-circle {
+    transition: none !important;
+    transform: none !important;
+  }
+}
